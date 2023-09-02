@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_bookings",
+  "info": {
+    "singularName": "user-booking",
+    "pluralName": "user-bookings",
+    "displayName": "user-booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "event_details": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event-detail.event-detail"
+    }
+  }
+}

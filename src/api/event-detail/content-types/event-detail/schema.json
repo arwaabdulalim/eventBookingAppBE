@@ -22,24 +22,13 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "text"
     },
     "speakers": {
       "type": "string"
     },
     "price": {
       "type": "decimal"
-    },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     },
     "capacity": {
       "type": "integer"
@@ -52,6 +41,9 @@
       "relation": "manyToOne",
       "target": "api::event-list.event-list",
       "inversedBy": "event_details"
+    },
+    "imageUrl": {
+      "type": "string"
     }
   }
 }
