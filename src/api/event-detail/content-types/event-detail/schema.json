@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_details",
+  "info": {
+    "singularName": "event-detail",
+    "pluralName": "event-details",
+    "displayName": "event-details",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "speakers": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "capacity": {
+      "type": "integer"
+    },
+    "spots": {
+      "type": "integer"
+    },
+    "event_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event-list.event-list",
+      "inversedBy": "event_details"
+    }
+  }
+}
