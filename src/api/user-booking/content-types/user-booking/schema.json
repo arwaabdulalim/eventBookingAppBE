@@ -4,13 +4,20 @@
   "info": {
     "singularName": "user-booking",
     "pluralName": "user-bookings",
-    "displayName": "user-booking"
+    "displayName": "user-booking",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_bookings"
+    },
     "event_details": {
       "type": "relation",
       "relation": "oneToMany",
